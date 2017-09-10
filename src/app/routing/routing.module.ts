@@ -6,10 +6,26 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-  { path: 'dashboard', component: DashboardComponent },
-  { path: 'detail/:id', component: HeroDetailComponent },
-  { path: 'heroes', component: HeroesComponent }
+  {
+    path: '',
+    redirectTo: '/dashboard',
+    pathMatch: 'full'
+  },
+
+  {
+    path: 'dashboard',
+    component: DashboardComponent
+  },
+
+  {
+    path: 'detail/:id',
+    component: HeroDetailComponent
+  },
+
+  {
+    path: 'heroes',
+    component: HeroesComponent
+  }
 ];
 
 @NgModule({
@@ -22,6 +38,12 @@ const routes: Routes = [
     RouterModule
   ],
 
-  declarations: []
+  declarations: [
+    // There are no declarations. Declarations are the responsibility of the companion module.
+  ],
+
+  providers: [
+    // If you have guard services, the Routing Module adds module providers. (There are none in this example.)
+  ]
 })
 export class RoutingModule { }
